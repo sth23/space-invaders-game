@@ -79,7 +79,7 @@ class SpaceInvadersGame(App):
         self.player1 = Ship((self.width / 2, self.height - 40), self.width)
         
         self.numbarriers = self.width // (2 * 120)
-        self.barriergap = (self.width - 120 * self.numbarriers) / 5
+        self.barriergap = (self.width - 120 * self.numbarriers) / self.numbarriers
         self.createBarriers()
         print(self.numbarriers)
         print(self.barriergap)
