@@ -33,6 +33,13 @@ class Bullet(Sprite):
     def step(self):
         self.y += self.vy
         
+class Invader(Sprite):
+    rect = RectangleAsset(10, 10, noline, black)
+    
+    def __init__(self, position):
+        super().__init__(Invader.rect, position)
+        self.rotation = math.pi / 4
+        
 class Ship(Sprite):
     ship = PolygonAsset([(0,30), (15,0), (30,30), (15,15)], noline, black)
     
@@ -89,6 +96,8 @@ class SpaceInvadersGame(App):
             for y in range(0,4):
                 for z in range(0,self.numbarriers):
                     Barrier((self.barriergap / 2 + (self.barriergap + 120) * z + x * 15, self.height - 150 + y * 15))
+                    
+    def createInvaders(self):
         
     def step(self):
         self.player1.step()
