@@ -25,7 +25,7 @@ class Barriers(Sprite):
 class Bullet(Sprite):
     rect = RectangleAsset(20, 4, noline, black)
     
-    def __init__(self, position, direction)
+    def __init__(self, position, direction):
         super().__init__(Bullet.rect, position)
         self.speed = 5
         self.vy = self.speed * direction
