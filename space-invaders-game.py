@@ -125,13 +125,13 @@ class SpaceInvadersGame(App):
             if bullet.y < -20:
                 bullet.destroy()
             else:
-                if bullet.y >= self.height - 150:
+                if bullet.y <= self.height - 150:
                     barriers = bullet.collidingWithSprites(Barrier)
                     if barriers:
                         for barrier in barriers:
                             barrier.destroy()
                         bullet.destroy()
-                elif bullet.y > self.height - 80:
+                elif bullet.y > self.height - 90:
                     if bullet.collidingWithSprites(Ship):
                         self.player1.destroy()
                         bullet.destroy()
