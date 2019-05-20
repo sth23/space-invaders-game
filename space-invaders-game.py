@@ -76,7 +76,7 @@ class SpaceInvadersGame(App):
     def step(self):
         self.player1.step()
         
-        for bullet in self.getClassbySprite(Bullet):
+        for bullet in self.getSpritesbyClass(Bullet):
             bullet.step()
         
 myapp = SpaceInvadersGame()
