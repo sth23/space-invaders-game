@@ -41,7 +41,7 @@ class Ship(Sprite):
         self.gamewidth = width
         self.speed = 5
         self.vx = 0
-        self.shootcooldown = 100
+        self.shootcooldown = 10
         self.count = 0
         
         SpaceInvadersGame.listenKeyEvent("keydown", "space", self.shoot)
