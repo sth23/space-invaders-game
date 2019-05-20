@@ -34,7 +34,7 @@ class Bullet(Sprite):
         self.y += self.vy
         
 class Ship(Sprite):
-    ship = PolygonAsset((0,30), (15,0), (30,30), (15,15), noline, black)
+    ship = PolygonAsset([(0,30), (15,0), (30,30), (15,15)], noline, black)
     
     def __init__(self, position):
         super().__init__(Ship.ship, position, width)
