@@ -39,6 +39,19 @@ class Invader(Sprite):
     def __init__(self, position):
         super().__init__(Invader.rect, position)
         self.rotation = math.pi / 4
+        self.speed = 2.5
+        self.vx = 0
+        self.vy = 0
+        
+    def shoot(self):
+        Bullet((self.x + 7.5, self.y + 15), 1)
+        
+    def step(self):
+        self.x += self.vx
+        self.y += self.vy
+        
+        if random.randint(0,10) == 0:
+            self.shoot()
         
 class Ship(Sprite):
     ship = PolygonAsset([(0,30), (15,0), (30,30), (15,15)], noline, black)
@@ -104,13 +117,16 @@ class SpaceInvadersGame(App):
     def step(self):
         self.player1.step()
         
+        for invader in self.getSpritesbyClass(Invader):
+            invader.step()
+        
         for bullet in self.getSpritesbyClass(Bullet):
             bullet.step()
             
             if bullet.y < -20:
                 bullet.destroy()
             else:
-                if bullet.y >= self.height - 150
+                if bullet.y >= self.height - 150:
                     barriers = bullet.collidingWithSprites(Barrier)
                     if barriers:
                         for barrier in barriers:
