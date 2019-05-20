@@ -17,7 +17,7 @@ whiteline = LineStyle(1, white)
 blackline = LineStyle(1, black)
 
 class Barrier(Sprite):
-    square = RectangleAsset(30, 30, noline, black)
+    square = RectangleAsset(15, 15, noline, black)
     
     def __init__(self, position):
         super().__init__(Barrier.square, position)
