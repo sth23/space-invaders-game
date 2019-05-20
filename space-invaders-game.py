@@ -34,7 +34,7 @@ class Bullet(Sprite):
         self.y += self.vy
         
 class Invader(Sprite):
-    rect = RectangleAsset(20, 20, noline, black)
+    rect = RectangleAsset(15, 15, noline, black)
     
     def __init__(self, position):
         super().__init__(Invader.rect, position)
