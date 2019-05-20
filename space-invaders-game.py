@@ -79,7 +79,7 @@ class SpaceInvadersGame(App):
         for bullet in self.getSpritesbyClass(Bullet):
             bullet.step()
             
-            if bullet.y < 0:
+            if bullet.y < -20:
                 bullet.destroy()
         
 myapp = SpaceInvadersGame()
