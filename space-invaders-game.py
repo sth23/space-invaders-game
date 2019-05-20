@@ -17,7 +17,7 @@ whiteline = LineStyle(1, white)
 blackline = LineStyle(1, black)
 
 class Barrier(Sprite):
-    square = RectangleAsset(30, 30, noline, black)
+    square = RectangleAsset(15, 15, noline, black)
     
     def __init__(self, position):
         super().__init__(Barrier.square, position)
@@ -77,13 +77,18 @@ class SpaceInvadersGame(App):
         self.createBarriers()
         
     def createBarriers(self):
-        
+        for x in range(0, 8):
+            for y in range(0,4):
+                Barrier((100 + x * 15, self.height - 150 + y * 15))
         
         
         
         Barrier((100, self.height - 150))
+        Barrier((115, self.height - 150))        
         Barrier((130, self.height - 150))
+        Barrier((145, self.height - 150))
         Barrier((160, self.height - 150))
+        Barrier((175, self.height - 150))
         Barrier((190, self.height - 150))
         Barrier((100, self.height - 120))
         Barrier((130, self.height - 120))
