@@ -23,7 +23,7 @@ class Barriers(Sprite):
         super().__init__(Barriers.square, position)
         
 class Bullet(Sprite):
-    rect = RectangleAsset(20, 4, noline, black)
+    rect = RectangleAsset(4, 20, noline, black)
     
     def __init__(self, position, direction):
         super().__init__(Bullet.rect, position)
