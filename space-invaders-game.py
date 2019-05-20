@@ -110,15 +110,15 @@ class SpaceInvadersGame(App):
             if bullet.y < -20:
                 bullet.destroy()
             else:
-                barriers = bullet.collidingWithSprites(Barrier)
-                if barriers:
-                    for barrier in barriers:
-                        barrier.destroy()
-                    bullet.destroy()
-                else:
-                    for invader in bullet.collidingWithSprites(Invader):
-                        invader.destroy()
+                if bullet.y >= self.height - 150
+                    barriers = bullet.collidingWithSprites(Barrier)
+                    if barriers:
+                        for barrier in barriers:
+                            barrier.destroy()
                         bullet.destroy()
+                for invader in bullet.collidingWithSprites(Invader):
+                    invader.destroy()
+                    bullet.destroy()
                     
         
 myapp = SpaceInvadersGame()
