@@ -38,6 +38,7 @@ class Ship(Sprite):
     
     def __init__(self, position):
         super().__init__(Ship.ship, position, width)
+        self.gamewidth = width
         self.speed = 5
         self.vx = 0
         
