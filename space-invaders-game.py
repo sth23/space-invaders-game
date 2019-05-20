@@ -75,6 +75,7 @@ class SpaceInvadersGame(App):
         
         self.numbarriers = self.width // (2 * 120)
         self.createBarriers()
+        print(self.numbarriers)
         
     def createBarriers(self):
         for x in range(0, 8):
