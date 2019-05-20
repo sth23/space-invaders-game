@@ -68,6 +68,8 @@ class SpaceInvadersGame(App):
     def __init__(self):
         super().__init__()
         
+        self.player1 = Ship((self.width / 2, self.height - 40))
+        
 myapp = SpaceInvadersGame()
 myapp.run()
         
