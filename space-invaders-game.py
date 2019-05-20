@@ -102,7 +102,8 @@ class SpaceInvadersGame(App):
             else:
                 barriers = bullet.collidingWithSprites(Barrier)
                 if barriers:
-                    barrier[0].destroy()
+                    for barrier in barriers:
+                        barrier.destroy()
                     bullet.destroy()
         
 myapp = SpaceInvadersGame()
