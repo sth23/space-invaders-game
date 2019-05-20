@@ -41,6 +41,8 @@ class Ship(Sprite):
         self.gamewidth = width
         self.speed = 5
         self.vx = 0
+        
+        SpaceInvadersGame.listenKeyEvent("keydown", "space", shoot)
         """
         SpaceInvadersGame.listenKeyEvent("keydown", "right arrow", moveRightOn)
         SpaceInvadersGame.listenKeyEvent("keyup", "right arrow", moveRightOff)
