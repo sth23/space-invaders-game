@@ -72,7 +72,7 @@ class Ship(Sprite):
 
     def shoot(self, event):
         if self.count > self.shootcooldown:
-            Bullet((self.x + 13, self.y - 15), -1)
+            Bullet((self.x + 13, self.y - 20), -1)
             self.count = 0
 
     def moveRightOn(self, event):
