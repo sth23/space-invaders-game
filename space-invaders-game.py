@@ -50,7 +50,7 @@ class Invader(Sprite):
         self.x += self.vx
         self.y += self.vy
         
-        if random.randint(0,100) == 0:
+        if random.randint(0,500) == 0:
             self.shoot()
         
 class Ship(Sprite):
