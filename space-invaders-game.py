@@ -81,20 +81,6 @@ class SpaceInvadersGame(App):
             for y in range(0,4):
                 Barrier((100 + x * 15, self.height - 150 + y * 15))
         
-        
-        
-        Barrier((100, self.height - 150))
-        Barrier((115, self.height - 150))        
-        Barrier((130, self.height - 150))
-        Barrier((145, self.height - 150))
-        Barrier((160, self.height - 150))
-        Barrier((175, self.height - 150))
-        Barrier((190, self.height - 150))
-        Barrier((100, self.height - 120))
-        Barrier((130, self.height - 120))
-        Barrier((160, self.height - 120))
-        Barrier((190, self.height - 120))
-        
     def step(self):
         self.player1.step()
         
