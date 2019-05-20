@@ -42,16 +42,16 @@ class Ship(Sprite):
         self.speed = 5
         self.vx = 0
         
-        SpaceInvadersGame.listenKeyEvent("keydown", "space", shoot)
-        """
-        SpaceInvadersGame.listenKeyEvent("keydown", "right arrow", moveRightOn)
-        SpaceInvadersGame.listenKeyEvent("keyup", "right arrow", moveRightOff)
-        SpaceInvadersGame.listenKeyEvent("keydown", "left arrow", moveLeftOn)
-        SpaceInvadersGame.listenKeyEvent("keydown", "left arrow", moveLeftOff)
-        """
+        SpaceInvadersGame.listenKeyEvent("keydown", "space", self.shoot)
+
+        SpaceInvadersGame.listenKeyEvent("keydown", "right arrow", self.moveRightOn)
+        SpaceInvadersGame.listenKeyEvent("keyup", "right arrow", self.moveRightOff)
+        SpaceInvadersGame.listenKeyEvent("keydown", "left arrow", self.moveLeftOn)
+        SpaceInvadersGame.listenKeyEvent("keydown", "left arrow", self.moveLeftOff)
+
     def shoot(self, event):
         Bullet((self.x, self.y), -1)
-        """
+
     def moveRightOn(self, event):
         self.vx = self.speed
         
@@ -63,7 +63,7 @@ class Ship(Sprite):
         
     def moveLeftOff(self, event):
         self.vx = 0
-     """   
+
     def step(self):
         self.x += self.vx
         
