@@ -34,7 +34,7 @@ class Bullet(Sprite):
         self.y += self.vy
         
 class Invader(Sprite):
-    rect = RectangleAsset(10, 10, noline, black)
+    rect = RectangleAsset(20, 20, noline, black)
     
     def __init__(self, position):
         super().__init__(Invader.rect, position)
@@ -99,7 +99,7 @@ class SpaceInvadersGame(App):
     def createInvaders(self):
         for y in range(0, 5):
             for x in range(0,10):
-                Invader((self.width / 8 + self.width * x / 80, 50 + y * 25))
+                Invader((self.width / 8 + self.width * x / 8, 50 + y * 25))
         
     def step(self):
         self.player1.step()
