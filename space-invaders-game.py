@@ -97,7 +97,9 @@ class SpaceInvadersGame(App):
                     Barrier((self.barriergap / 2 + (self.barriergap + 120) * z + x * 15, self.height - 150 + y * 15))
                     
     def createInvaders(self):
-        Invader((self.width / 2, self.height / 2))
+        for y in range(0, 5):
+            for x in range(0,10):
+                Invader((self.width / 8 + self.width * x / 80, 50 + y * 25))
         
     def step(self):
         self.player1.step()
