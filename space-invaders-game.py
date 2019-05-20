@@ -99,7 +99,7 @@ class SpaceInvadersGame(App):
     def createInvaders(self):
         for y in range(0, 5):
             for x in range(0,10):
-                Invader((self.width / 8 + self.width * x / 8, 50 + y * 40))
+                Invader((self.width / 8 + (self.width * 3 / 4) * x / 10, 50 + y * 40))
         
     def step(self):
         self.player1.step()
