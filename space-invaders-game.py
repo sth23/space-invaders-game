@@ -16,11 +16,11 @@ noline = LineStyle(0, black)
 whiteline = LineStyle(1, white)
 blackline = LineStyle(1, black)
 
-class Barriers(Sprite):
+class Barrier(Sprite):
     square = RectangleAsset(30, 30, noline, black)
     
     def __init__(self, position):
-        super().__init__(Barriers.square, position)
+        super().__init__(Barrier.square, position)
         
 class Bullet(Sprite):
     rect = RectangleAsset(4, 20, noline, black)
@@ -72,6 +72,12 @@ class SpaceInvadersGame(App):
         super().__init__()
         
         self.player1 = Ship((self.width / 2, self.height - 40), self.width)
+        
+    def step(self):
+        self.player1.step()
+        
+        for bullet in self.getClassbySprite(Bullet):
+            bullet.step()
         
 myapp = SpaceInvadersGame()
 myapp.run()
