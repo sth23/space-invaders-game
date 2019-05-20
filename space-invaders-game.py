@@ -73,17 +73,22 @@ class SpaceInvadersGame(App):
         
         self.player1 = Ship((self.width / 2, self.height - 40), self.width)
         
+        self.numbarriers = self.width // (2 * 120)
         self.createBarriers()
         
     def createBarriers(self):
-        Barrier((100, 100))
-        Barrier((130, 100))
-        Barrier((160, 100))
-        Barrier((190, 100))
-        Barrier((100, 130))
-        Barrier((130, 130))
-        Barrier((160, 130))
-        Barrier((190, 130))
+        
+        
+        
+        
+        Barrier((100, self.height - 150))
+        Barrier((130, self.height - 150))
+        Barrier((160, self.height - 150))
+        Barrier((190, self.height - 150))
+        Barrier((100, self.height - 120))
+        Barrier((130, self.height - 120))
+        Barrier((160, self.height - 120))
+        Barrier((190, self.height - 120))
         
     def step(self):
         self.player1.step()
@@ -97,7 +102,6 @@ class SpaceInvadersGame(App):
             for barrier in bullet.collidingWithSprites(Barrier):
                 barrier.destroy()
                 bullet.destroy()
-                
         
 myapp = SpaceInvadersGame()
 myapp.run()
