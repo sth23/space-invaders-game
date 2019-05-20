@@ -132,6 +132,10 @@ class SpaceInvadersGame(App):
                         for barrier in barriers:
                             barrier.destroy()
                         bullet.destroy()
+                elif bullet.y > self.height - 80:
+                    if bullet.collidingWithSprites(Ship):
+                        self.player1.destroy()
+                        bullet.destroy()
                 for invader in bullet.collidingWithSprites(Invader):
                     invader.destroy()
                     bullet.destroy()
