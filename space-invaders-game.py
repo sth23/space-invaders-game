@@ -49,10 +49,10 @@ class Invader(Sprite):
     def step(self):
         self.x += self.vx
         self.y += self.vy
-        
+        """
         if random.randint(0,500) == 0:
             self.shoot()
-        
+        """
 class Ship(Sprite):
     ship = PolygonAsset([(0,30), (15,0), (30,30), (15,15)], noline, black)
     
