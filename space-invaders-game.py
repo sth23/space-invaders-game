@@ -36,8 +36,8 @@ class Bullet(Sprite):
 class Ship(Sprite):
     ship = PolygonAsset([(0,30), (15,0), (30,30), (15,15)], noline, black)
     
-    def __init__(self, position):
-        super().__init__(Ship.ship, position, width)
+    def __init__(self, position, width):
+        super().__init__(Ship.ship, position)
         self.gamewidth = width
         self.speed = 5
         self.vx = 0
